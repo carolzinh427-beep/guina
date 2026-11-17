@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Star, MapPin, BookOpen, Calendar } from 'lucide-react';
+import { Star, BookOpen, Calendar } from 'lucide-react';
 
 export default function Hero({ onOpenMenu, onOpenReservation }) {
   const heroRef = useRef(null);
@@ -63,13 +63,6 @@ export default function Hero({ onOpenMenu, onOpenReservation }) {
         transition={{ duration: 0.9, delay: 0.15 }}
         className="relative z-20 max-w-7xl w-full mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pt-24 pb-20 sm:pt-28 md:pt-0 flex flex-col items-start text-left pointer-events-auto"
       >
-        {/* Location Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-gold/30 text-champagne mb-3 sm:mb-4 shadow-xl">
-          <MapPin size={13} className="text-gold" />
-          <span className="font-sans text-[9px] sm:text-[10px] tracking-[0.32em] uppercase font-semibold text-champagne">
-            São Paulo · Vila Mariana
-          </span>
-        </div>
 
         {/* Título: Guina Restaurante */}
         <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-champagne max-w-xl tracking-tight leading-[1.08] drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)] font-normal">
