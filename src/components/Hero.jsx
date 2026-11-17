@@ -27,16 +27,24 @@ export default function Hero({ onOpenMenu, onOpenReservation }) {
           <picture className="block w-full h-full">
             <source media="(min-width: 768px)" srcSet="/hero_desktop_bistrot.jpeg" />
             <img
-              src="/hero_mobile_bistrot.jpeg"
+              src="/hero_mobile_guina.jpg"
               alt="Guina Restaurante & Wine Bar São Paulo"
-              className="w-full h-full object-cover object-[65%_center] md:object-center"
+              className="w-full h-full object-cover object-center"
               loading="eager"
             />
           </picture>
 
-          {/* Sombreamento estritamente na metade horizontal esquerda (0% a 50%, 0% na direita) */}
+          {/* Sombreamento no Mobile: da esquerda cobrindo o texto com suavidade */}
           <div
-            className="absolute inset-0 pointer-events-none"
+            className="absolute inset-0 pointer-events-none md:hidden"
+            style={{
+              background: 'linear-gradient(90deg, rgba(5, 11, 20, 0.92) 0%, rgba(5, 11, 20, 0.78) 35%, rgba(5, 11, 20, 0.35) 55%, rgba(5, 11, 20, 0) 75%)'
+            }}
+          />
+
+          {/* Sombreamento no Desktop: estritamente na metade horizontal esquerda (0% a 50%, 0% na direita) */}
+          <div
+            className="absolute inset-0 pointer-events-none hidden md:block"
             style={{
               background: 'linear-gradient(90deg, rgba(5, 11, 20, 0.96) 0%, rgba(5, 11, 20, 0.88) 22%, rgba(5, 11, 20, 0.45) 38%, rgba(5, 11, 20, 0) 50%, rgba(5, 11, 20, 0) 100%)'
             }}
