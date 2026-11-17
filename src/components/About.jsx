@@ -66,11 +66,11 @@ export default function About({ onOpenReservation }) {
             <div>
               <p className="font-sans text-[10.5px] tracking-[0.4em] uppercase text-navy-700 font-bold mb-3 flex items-center gap-2">
                 <span className="w-8 h-[1.5px] bg-gold" />
-                Nossa História &amp; Tradição
+                Culinária Autoral &amp; Tradição
               </p>
               <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-navy-950 leading-[1.15]">
-                O Encanto da França <br />
-                <em className="italic font-light text-navy-800">no Coração de São Paulo</em>
+                A Arte da Gastronomia <br />
+                <em className="italic font-light text-navy-800">em Nosso Cardápio Autoral</em>
               </h2>
             </div>
 
