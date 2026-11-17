@@ -4,7 +4,7 @@ import { Clock, MapPin, Phone, Calendar, ArrowRight, Heart } from 'lucide-react'
 
 export default function ReservationSection({ onOpenReservation }) {
   return (
-    <section id="reservas" className="relative py-32 md:py-44 overflow-hidden bg-navy-950">
+    <section id="reservas" className="relative py-20 md:py-28 overflow-hidden bg-navy-950">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <picture>
@@ -25,7 +25,7 @@ export default function ReservationSection({ onOpenReservation }) {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
           viewport={{ once: true }}
-          className="space-y-8"
+          className="space-y-6"
         >
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/15 border border-gold/40 text-gold-light text-xs font-sans tracking-[0.35em] uppercase font-bold mx-auto">
@@ -54,7 +54,7 @@ export default function ReservationSection({ onOpenReservation }) {
           </div>
 
           {/* Practical Info Grid */}
-          <div className="pt-10 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-champagne/80 border-t border-gold/20 max-w-3xl mx-auto">
+          <div className="pt-7 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-champagne/80 border-t border-gold/20 max-w-3xl mx-auto">
             
             <div className="flex items-center gap-3">
               <div className="p-2 rounded-full bg-gold/15 text-gold border border-gold/30">

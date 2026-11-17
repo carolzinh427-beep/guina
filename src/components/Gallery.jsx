@@ -21,11 +21,11 @@ export default function Gallery() {
   };
 
   return (
-    <section id="galeria" className="section-warm-bg py-24 md:py-36 relative overflow-hidden border-t border-gold/15">
+    <section id="galeria" className="section-warm-bg py-16 md:py-24 relative overflow-hidden border-t border-gold/15">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10">
           <p className="font-sans text-[10.5px] tracking-[0.4em] uppercase text-navy-700 font-bold mb-3 flex items-center justify-center gap-2">
             <Camera size={14} className="text-gold" />
             L'Atmosphère &amp; Momentos

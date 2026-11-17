@@ -11,13 +11,13 @@ export default function WineBarSection({ onOpenReservation }) {
   ];
 
   return (
-    <section id="vinhos" className="dark-section-bg py-24 md:py-36 overflow-hidden relative border-t border-gold/20 text-champagne">
+    <section id="vinhos" className="dark-section-bg py-16 md:py-24 overflow-hidden relative border-t border-gold/20 text-champagne">
       {/* Decorative Gold Glow & Hydrangea Glow */}
       <div className="absolute top-1/4 -right-20 w-80 h-80 rounded-full bg-gold/10 blur-[110px] pointer-events-none" />
       <div className="absolute bottom-10 left-10 w-80 h-80 rounded-full bg-hydrangea/10 blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Column: Wine Bar Concept */}
           <motion.div
@@ -25,7 +25,7 @@ export default function WineBarSection({ onOpenReservation }) {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9 }}
             viewport={{ once: true }}
-            className="space-y-8 order-2 lg:order-1"
+            className="space-y-6 order-2 lg:order-1"
           >
             <div>
               <p className="font-sans text-[10.5px] tracking-[0.4em] uppercase text-gold font-bold mb-4 flex items-center gap-2">

@@ -11,12 +11,12 @@ export default function MenuSection({ onOpenFullMenu, onOpenReservation }) {
   ];
 
   return (
-    <section id="cardapio" className="section-warm-bg py-24 md:py-36 overflow-hidden relative border-t border-gold/15">
+    <section id="cardapio" className="section-warm-bg py-16 md:py-24 overflow-hidden relative border-t border-gold/15">
       {/* Soft Ambient Light */}
       <div className="absolute top-1/2 left-0 w-72 h-72 rounded-full bg-gold/10 blur-[90px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Column: Descriptions and Highlights */}
           <motion.div
@@ -24,7 +24,7 @@ export default function MenuSection({ onOpenFullMenu, onOpenReservation }) {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9 }}
             viewport={{ once: true }}
-            className="space-y-8 order-2 lg:order-1"
+            className="space-y-6 order-2 lg:order-1"
           >
             <div>
               <p className="font-sans text-[10.5px] tracking-[0.4em] uppercase text-navy-700 font-bold mb-4 flex items-center gap-2">

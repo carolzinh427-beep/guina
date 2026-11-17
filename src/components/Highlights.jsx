@@ -33,7 +33,7 @@ export default function Highlights() {
   ];
 
   return (
-    <section className="bg-navy-900 py-10 md:py-14 border-y border-gold/20 relative overflow-hidden">
+    <section className="bg-navy-900 py-6 md:py-9 border-y border-gold/20 relative overflow-hidden">
       {/* Subtle radial golden glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.06)_0%,transparent_70%)] pointer-events-none" />
 

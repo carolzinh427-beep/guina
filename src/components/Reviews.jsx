@@ -17,14 +17,14 @@ export default function Reviews() {
   const current = reviews[currentIndex];
 
   return (
-    <section id="avaliacoes" className="py-20 md:py-32 relative overflow-hidden bg-gradient-to-b from-[#F5F1E8] via-[#FDFBF7] to-[#EBF1FA]">
+    <section id="avaliacoes" className="py-14 md:py-22 relative overflow-hidden bg-gradient-to-b from-[#F5F1E8] via-[#FDFBF7] to-[#EBF1FA]">
       {/* Background Soft Glow */}
       <div className="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-gradient-to-r from-gold/15 via-hydrangea/15 to-navy-700/15 blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="text-center mb-14 md:mb-18">
+        <div className="text-center mb-10 md:mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-navy-950/5 border border-gold/40 text-navy-900 mb-3.5">
             <CheckCircle2 size={13} className="text-gold" />
             <span className="font-sans text-[10px] tracking-[0.3em] uppercase font-bold text-navy-900">
@@ -57,11 +57,11 @@ export default function Reviews() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.98, y: -15 }}
               transition={{ duration: 0.4 }}
-              className="bg-white/95 backdrop-blur-md rounded-3xl p-8 sm:p-12 border border-gold/30 shadow-xl relative"
+              className="bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-10 border border-gold/30 shadow-xl relative"
             >
               <Quote className="absolute top-6 right-8 w-12 h-12 text-gold/20 -scale-x-100 pointer-events-none" />
 
-              <div className="flex items-center gap-1.5 mb-6">
+              <div className="flex items-center gap-1.5 mb-5">
                 {[...Array(current.stars)].map((_, i) => (
                   <Star key={i} size={18} className="fill-gold text-gold" />
                 ))}
@@ -70,11 +70,11 @@ export default function Reviews() {
                 </span>
               </div>
 
-              <p className="font-serif text-lg sm:text-xl md:text-2xl text-navy-950 leading-relaxed italic mb-8">
+              <p className="font-serif text-lg sm:text-xl md:text-2xl text-navy-950 leading-relaxed italic mb-6">
                 "{current.text}"
               </p>
 
-              <div className="flex items-center justify-between border-t border-navy-900/10 pt-6">
+              <div className="flex items-center justify-between border-t border-navy-900/10 pt-5">
                 <div className="flex items-center gap-3.5">
                   <div className="w-11 h-11 rounded-full bg-navy-900 text-gold font-serif font-bold text-sm flex items-center justify-center shadow-md border border-gold/40">
                     {current.initials}
@@ -127,7 +127,7 @@ export default function Reviews() {
         </div>
 
         {/* Link to Google Reviews */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-8">
           <a
             href="https://www.google.com/search?q=Guina+Restaurante+São+Paulo+avaliacoes"
             target="_blank"

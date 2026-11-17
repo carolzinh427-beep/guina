@@ -16,7 +16,7 @@ export default function Hero({ onOpenMenu, onOpenReservation }) {
     <section
       id="home"
       ref={heroRef}
-      className="relative h-screen min-h-[700px] flex items-end justify-center overflow-hidden bg-navy-950"
+      className="relative h-screen min-h-[620px] max-h-[920px] flex items-end justify-center overflow-hidden bg-navy-950"
     >
       {/* Background Image with Parallax */}
       <motion.div
@@ -46,10 +46,10 @@ export default function Hero({ onOpenMenu, onOpenReservation }) {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.15 }}
-        className="absolute top-32 sm:top-36 md:top-40 lg:top-44 xl:top-48 left-0 right-0 z-20 px-4 md:px-8 text-center pointer-events-none flex flex-col items-center"
+        className="absolute top-28 sm:top-32 md:top-36 lg:top-40 left-0 right-0 z-20 px-4 md:px-8 text-center pointer-events-none flex flex-col items-center"
       >
         {/* Location Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/45 backdrop-blur-md border border-white/20 text-champagne mb-3 sm:mb-4 shadow-lg">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/45 backdrop-blur-md border border-white/20 text-champagne mb-2.5 sm:mb-3 shadow-lg">
           <MapPin size={13} className="text-gold" />
           <span className="font-sans text-[9px] sm:text-[10px] tracking-[0.35em] uppercase font-semibold text-champagne">
             São Paulo · Vila Mariana
@@ -62,7 +62,7 @@ export default function Hero({ onOpenMenu, onOpenReservation }) {
         </h1>
 
         {/* 5 Golden Stars */}
-        <div className="flex items-center justify-center gap-2 mt-3 sm:mt-4">
+        <div className="flex items-center justify-center gap-2 mt-2.5 sm:mt-3">
           {[1, 2, 3, 4, 5].map((star) => (
             <Star
               key={star}
@@ -77,7 +77,7 @@ export default function Hero({ onOpenMenu, onOpenReservation }) {
       </motion.div>
 
       {/* Action Buttons */}
-      <div className="absolute bottom-16 sm:bottom-20 left-0 right-0 z-20 flex flex-wrap items-center justify-center gap-3.5 px-6 pointer-events-auto">
+      <div className="absolute bottom-12 sm:bottom-16 left-0 right-0 z-20 flex flex-wrap items-center justify-center gap-3.5 px-6 pointer-events-auto">
         <button
           onClick={onOpenReservation}
           className="btn-gold text-xs py-3.5 px-7 shadow-xl flex items-center gap-2.5 cursor-pointer"

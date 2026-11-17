@@ -11,13 +11,13 @@ export default function About({ onOpenReservation }) {
   ];
 
   return (
-    <section id="histoire" className="section-warm-bg py-24 md:py-36 relative overflow-hidden">
+    <section id="histoire" className="section-warm-bg py-16 md:py-24 relative overflow-hidden">
       {/* Decorative floral hydrangea / gold background blur */}
       <div className="absolute top-1/4 -left-20 w-80 h-80 rounded-full bg-hydrangea/10 blur-[100px] pointer-events-none" />
       <div className="absolute bottom-10 right-0 w-96 h-96 rounded-full bg-gold/10 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Left: Image with floating badge */}
           <motion.div
@@ -61,7 +61,7 @@ export default function About({ onOpenReservation }) {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
             viewport={{ once: true }}
-            className="lg:pl-8 space-y-7"
+            className="lg:pl-8 space-y-5"
           >
             <div>
               <p className="font-sans text-[10.5px] tracking-[0.4em] uppercase text-navy-700 font-bold mb-3 flex items-center gap-2">

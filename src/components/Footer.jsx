@@ -3,12 +3,12 @@ import { MapPin, Clock, Phone, Instagram, MessageCircle, Heart } from 'lucide-re
 
 export default function Footer({ onOpenReservation }) {
   return (
-    <footer id="contato" className="bg-navy-950 text-champagne pt-20 pb-12 border-t border-gold/25 relative overflow-hidden">
+    <footer id="contato" className="bg-navy-950 text-champagne pt-14 pb-8 border-t border-gold/25 relative overflow-hidden">
       {/* Decorative ambient subtle glow */}
       <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-gold/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           
           {/* Brand Presentation */}
           <div className="lg:col-span-1 space-y-5">
