@@ -6,13 +6,13 @@ export default function Highlights() {
   const items = [
     {
       icon: <Award className="w-6 h-6 text-gold mb-2.5 stroke-[1.5]" />,
-      title: "Restaurante Premiado",
-      subtitle: "Excelência e tradição gastronômica",
+      title: "Chefs do Bistrot de Ville",
+      subtitle: "Criado pelos chefs do restaurante premiado",
     },
     {
       icon: <Sparkles className="w-6 h-6 text-gold mb-2.5 stroke-[1.5]" />,
       title: "Melhor Experiência Gastronômica",
-      subtitle: "Reconhecido entre os melhores da capital",
+      subtitle: "Alta culinária autoral e exclusiva",
     },
     {
       icon: (
@@ -28,7 +28,7 @@ export default function Highlights() {
     {
       icon: <UtensilsCrossed className="w-6 h-6 text-gold mb-2.5 stroke-[1.5]" />,
       title: "Chefs Le Cordon Bleu",
-      subtitle: "Cozinha autoral e Wine Bar refinado",
+      subtitle: "Técnica francesa e Wine Bar refinado",
     },
   ];
 

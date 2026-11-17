@@ -7,7 +7,7 @@ export default function About({ onOpenReservation }) {
     "Ambiente intimista e romântico à luz de velas",
     "Chefs com formação internacional pela Le Cordon Bleu",
     "Adega exclusiva com mais de 120 rótulos selecionados",
-    "Experiência gastronômica premiada em São Paulo",
+    "Gastronomia assinada pelos chefs do premiado Bistrot de Ville",
   ];
 
   return (
@@ -44,13 +44,13 @@ export default function About({ onOpenReservation }) {
               whileInView={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
               viewport={{ once: true }}
-              className="absolute -bottom-8 -right-4 md:-right-8 w-44 md:w-56 bg-navy-900 border border-gold/40 rounded-2xl p-5 shadow-2xl"
+              className="absolute -bottom-8 -right-4 md:-right-8 w-48 md:w-60 bg-navy-900 border border-gold/40 rounded-2xl p-4 sm:p-5 shadow-2xl"
             >
-              <div className="font-serif text-4xl md:text-5xl text-gold font-bold leading-none mb-1">
-                8+
+              <div className="font-serif text-xl sm:text-2xl text-gold font-bold leading-tight mb-1">
+                Bistrot de Ville
               </div>
-              <div className="font-sans text-[8.5px] tracking-[0.25em] uppercase text-champagne/80 font-semibold leading-relaxed">
-                Anos de Alta Culinária &amp; Wine Bar
+              <div className="font-sans text-[8px] sm:text-[9px] tracking-[0.2em] uppercase text-champagne/80 font-semibold leading-relaxed">
+                Pelos Chefs do Restaurante Premiado
               </div>
             </motion.div>
           </motion.div>
@@ -78,10 +78,10 @@ export default function About({ onOpenReservation }) {
 
             <div className="space-y-4 text-navy-900/80 font-body text-base md:text-[17px] leading-relaxed">
               <p>
-                Nascido da união entre o amor pela gastronomia clássica e o fascínio pelo universo dos vinhos finos, o <strong>Guina Restaurante &amp; Wine Bar</strong> convida você a desacelerar e vivenciar uma jornada sensorial inesquecível na Vila Mariana, São Paulo.
+                O <strong>Guina Restaurante &amp; Wine Bar</strong> é a nova e exclusiva casa gastronômica concebida e comandada pelos chefs do premiado <em>Bistrot de Ville</em> na Vila Mariana, São Paulo.
               </p>
               <p>
-                Cada prato é concebido com maestria por nossos chefs formados pela renomada <em>Le Cordon Bleu</em>, resgatando técnicas seculares francesas com ingredientes nobres e uma assinatura contemporânea e autoral.
+                Trazendo a mesma maestria culinária, formação internacional pela renomada <em>Le Cordon Bleu</em> e o rigor técnico que consagraram seus criadores, o Guina nasce como uma experiência independente e autoral, unindo pratos refinados a uma curadoria criteriosa de vinhos finos.
               </p>
               <p>
                 Nossa exclusiva atmosfera combina elementos barrocos em azul nobre e ouro com a delicadeza de hortênsias frescas, criando o cenário ideal para jantares românticos, comemorações memoráveis e encontros refinados.
