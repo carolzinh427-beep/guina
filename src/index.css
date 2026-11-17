@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-gold: #D4AF37;
+  --color-gold-light: #F5E7B2;
+  --color-navy: #0A172A;
+  --color-navy-dark: #050B14;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A172A;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ECD08E;
+}
+
+/* Subtle Film Grain */
+.grain::after {
+  content: "";
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Section Backgrounds */
+.section-warm-bg {
+  background: linear-gradient(160deg, #FDFBF7 0%, #F5F1E8 52%, #EBF1FA 100%);
+}
+
+.dark-section-bg {
+  background: radial-gradient(circle at 18% 18%, rgba(212, 175, 55, 0.12), transparent 32rem),
+              radial-gradient(circle at 84% 12%, rgba(59, 130, 246, 0.08), transparent 30rem),
+              linear-gradient(160deg, #0D1F38 0%, #0A172A 50%, #050B14 100%);
+}
+
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(5, 11, 20, 0.75) 0%, rgba(10, 23, 42, 0.3) 50%, rgba(5, 11, 20, 0.85) 100%);
+}
+
+/* Card Shadows */
+.card-shadow {
+  box-shadow: 0 4px 20px rgba(10, 23, 42, 0.08), 0 1px 3px rgba(212, 175, 55, 0.12);
+}
+
+.card-shadow-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-shadow-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(10, 23, 42, 0.15), 0 0 24px rgba(212, 175, 55, 0.2);
+}
+
+/* Gold Buttons & Links */
+.btn-gold {
+  color: #0A172A;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #F5E7B2 0%, #D4AF37 55%, #B89025 100%);
+  border: 1px solid #ECD08E;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2.25rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  transition: all 0.35s ease;
+  display: inline-flex;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35);
+}
+.btn-gold:hover {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5E7B2 40%, #D4AF37 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5);
+}
+
+/* Compatibility with original class name */
+.btn-rose-light {
+  color: #0A172A;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #F5E7B2 0%, #D4AF37 55%, #B89025 100%);
+  border: 1px solid #ECD08E;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2.25rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  transition: all 0.35s ease;
+  display: inline-flex;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35);
+}
+.btn-rose-light:hover {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5E7B2 40%, #D4AF37 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5);
+}
+
+.btn-outline-champagne {
+  color: #FAF4E4;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid rgba(250, 244, 228, 0.45);
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2.25rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  transition: all 0.35s;
+  display: inline-flex;
+}
+.btn-outline-champagne:hover {
+  background-color: rgba(250, 244, 228, 0.15);
+  border-color: #D4AF37;
+  color: #D4AF37;
+  transform: translateY(-2px);
+}
+
+.btn-outline-wine {
+  color: #D4AF37;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2.25rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  transition: all 0.35s;
+  display: inline-flex;
+}
+.btn-outline-wine:hover {
+  color: #0A172A;
+  background: linear-gradient(135deg, #F5E7B2 0%, #D4AF37 100%);
+  border-color: #D4AF37;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+}
+
+/* Floating Reservation CTA */
+.floating-reservation-cta {
+  z-index: 40;
+  color: #FAF4E4;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #0A172A 0%, #11284A 100%);
+  border: 1px solid rgba(212, 175, 55, 0.7);
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.95rem 1.4rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  position: fixed;
+  right: 1.5rem;
+  box-shadow: 0 16px 36px rgba(5, 11, 20, 0.4), 0 0 20px rgba(212, 175, 55, 0.25);
+}
+.floating-reservation-cta:hover {
+  background: linear-gradient(135deg, #11284A 0%, #183B6C 100%);
+  border-color: #F5E7B2;
+  color: #F5E7B2;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 20px 44px rgba(5, 11, 20, 0.5), 0 0 28px rgba(212, 175, 55, 0.4);
+}
+
+/* Input Elegant */
+.input-elegant {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  background: #FDFBF7;
+  padding: 0.875rem 1.15rem;
+  font-size: 0.875rem;
+  color: #0A172A;
+  outline: none;
+  transition: all 0.25s ease;
+}
+.input-elegant:focus {
+  border-color: #D4AF37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+  background: #FFFFFF;
+}
+
+/* Gold Gradient Text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F5E7B2 0%, #D4AF37 50%, #ECD08E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
