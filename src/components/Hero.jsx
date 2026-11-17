@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Star, MapPin, ChevronDown, BookOpen, Calendar } from 'lucide-react';
+import { Star, MapPin, BookOpen, Calendar } from 'lucide-react';
 
 export default function Hero({ onOpenMenu, onOpenReservation }) {
   const heroRef = useRef(null);
@@ -104,23 +104,6 @@ export default function Hero({ onOpenMenu, onOpenReservation }) {
         </div>
       </motion.div>
 
-      {/* Downward Scroll Indicator */}
-      <motion.button
-        type="button"
-        onClick={() => {
-          const histoire = document.getElementById('histoire');
-          if (histoire) histoire.scrollIntoView({ behavior: 'smooth' });
-        }}
-        animate={{ y: [0, 6, 0] }}
-        transition={{ repeat: Infinity, duration: 2.2, ease: 'easeInOut' }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-champagne/80 hover:text-gold transition-colors cursor-pointer drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
-        aria-label="Rolar para baixo"
-      >
-        <span className="font-sans text-[8px] tracking-[0.45em] uppercase font-semibold">
-          Découvrir
-        </span>
-        <ChevronDown size={15} className="text-gold" />
-      </motion.button>
 
       {/* Divisória de Seção Animada e Chique */}
       <div className="absolute bottom-0 inset-x-0 z-30 flex items-center justify-center pointer-events-none">
