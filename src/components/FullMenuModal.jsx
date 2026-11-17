@@ -55,9 +55,7 @@ export default function FullMenuModal({
           {/* Top Bar */}
           <div className="bg-navy-900 border-b border-gold/25 p-4 sm:p-6 flex items-center justify-between gap-4 sticky top-0 z-20 shadow-md">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-navy-950 border border-gold/40 flex items-center justify-center p-1">
-                <img src="/logo-guina.png" alt="Logo" className="w-full h-full object-contain" />
-              </div>
+              <img src="/logo-guina.png" alt="Logo" className="h-10 w-auto object-contain filter drop-shadow-md" />
               <div>
                 <h3 className="font-serif text-lg sm:text-xl font-bold text-champagne leading-none">
                   Cardápio Digital

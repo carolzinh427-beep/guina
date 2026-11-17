@@ -42,9 +42,9 @@ export default function Navbar({ onOpenMenu, onOpenReservation }) {
           width: scrolled ? '94%' : '100%',
           maxWidth: scrolled ? '1360px' : '100%',
           borderRadius: scrolled ? 999 : 0,
-          paddingTop: scrolled ? 10 : 18,
-          paddingBottom: scrolled ? 10 : 18,
-          backgroundColor: scrolled ? 'rgba(10, 23, 42, 0.92)' : 'rgba(10, 23, 42, 0.72)',
+          paddingTop: scrolled ? 8 : 16,
+          paddingBottom: scrolled ? 8 : 16,
+          backgroundColor: scrolled ? 'rgba(10, 23, 42, 0.94)' : 'rgba(10, 23, 42, 0.72)',
           boxShadow: scrolled
             ? '0 20px 48px rgba(5, 11, 20, 0.45), 0 0 20px rgba(212, 175, 55, 0.15)'
             : '0 8px 30px rgba(5, 11, 20, 0.25)',
@@ -67,23 +67,21 @@ export default function Navbar({ onOpenMenu, onOpenReservation }) {
       >
         <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-8 flex items-center justify-between gap-4">
           
-          {/* Logo / Brand Name */}
+          {/* Logo / Brand Name - Sem círculo e com fundo transparente */}
           <a
             href="#home"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="flex items-center gap-3.5 group cursor-pointer"
+            className="flex items-center gap-3 sm:gap-4 group cursor-pointer select-none"
             title="Guina Restaurante & Wine Bar"
           >
-            <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border border-gold/40 shadow-gold-subtle group-hover:border-gold transition-colors shrink-0 bg-navy-950 flex items-center justify-center p-0.5">
-              <img
-                src="/logo-guina.png"
-                alt="Guina Logo"
-                className="w-full h-full object-contain transform group-hover:scale-105 transition-transform"
-              />
-            </div>
+            <img
+              src="/logo-guina.png"
+              alt="Guina Restaurante & Wine Bar"
+              className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_2px_12px_rgba(212,175,55,0.4)]"
+            />
             <div className="flex flex-col leading-none">
               <span className="font-serif text-lg sm:text-xl font-bold tracking-[0.14em] text-gold group-hover:text-gold-light transition-colors">
                 GUINA
@@ -100,7 +98,7 @@ export default function Navbar({ onOpenMenu, onOpenReservation }) {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="font-sans text-[11px] xl:text-[11.5px] tracking-[0.22em] uppercase text-champagne/85 hover:text-gold transition-colors duration-200 font-semibold relative py-1 group"
+                className="font-sans text-[11px] xl:text-[11.5px] tracking-[0.22em] uppercase text-champagne/85 hover:text-gold transition-colors duration-200 font-semibold relative py-1 group cursor-pointer"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gradient-to-r from-gold to-gold-light group-hover:w-full transition-all duration-300" />
@@ -171,7 +169,7 @@ export default function Navbar({ onOpenMenu, onOpenReservation }) {
               <div>
                 <div className="flex items-center justify-between pb-6 border-b border-gold/20">
                   <div className="flex items-center gap-3">
-                    <img src="/logo-guina.png" alt="Logo" className="w-9 h-9 object-contain" />
+                    <img src="/logo-guina.png" alt="Logo" className="h-11 w-auto object-contain filter drop-shadow-md" />
                     <div>
                       <div className="font-serif text-lg font-bold text-gold">GUINA</div>
                       <div className="font-sans text-[8px] tracking-widest text-champagne/70 uppercase">Restaurante &amp; Wine Bar</div>

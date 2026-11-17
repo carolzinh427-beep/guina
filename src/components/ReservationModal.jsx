@@ -128,9 +128,7 @@ export default function ReservationModal({ isOpen, onClose }) {
             {/* Header */}
             <div className="flex items-start justify-between border-b border-gold/20 pb-5 mb-6">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-navy-950 border border-gold/40 flex items-center justify-center p-1.5 shrink-0">
-                  <img src="/logo-guina.png" alt="Logo" className="w-full h-full object-contain" />
-                </div>
+                <img src="/logo-guina.png" alt="Logo" className="h-12 w-auto object-contain filter drop-shadow-md shrink-0" />
                 <div>
                   <h3 className="font-serif text-2xl font-bold text-gold">
                     Reserva de Mesa

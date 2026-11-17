@@ -64,9 +64,7 @@ export default function CheckoutModal({ isOpen, onClose, cart, onClearCart }) {
             className="relative w-full max-w-lg rounded-3xl p-7 sm:p-10 max-h-[90vh] overflow-y-auto bg-navy-900 border border-gold/40 shadow-2xl text-champagne z-10"
           >
             <div className="text-center mb-8">
-              <div className="w-12 h-12 rounded-full bg-navy-950 border border-gold/40 mx-auto flex items-center justify-center p-1.5 mb-3">
-                <img src="/logo-guina.png" alt="Logo" className="w-full h-full object-contain" />
-              </div>
+              <img src="/logo-guina.png" alt="Logo" className="h-16 w-auto object-contain mx-auto mb-3 filter drop-shadow-md" />
               <h3 className="font-serif text-3xl text-gold font-bold mb-1">
                 Finalizar Pedido
               </h3>
