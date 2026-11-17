@@ -8,15 +8,15 @@ export default function ReservationSection({ onOpenReservation }) {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <picture>
-          <source media="(min-width: 768px)" srcSet="/hero_desktop_bistrot.jpeg" />
+          <source media="(min-width: 768px)" srcSet="/reservation_wine_special.jpg" />
           <img
-            src="/hero_restaurant.png"
-            alt="Jantar romântico no Guina Restaurante"
-            className="w-full h-full object-cover"
+            src="/reservation_wine_special.jpg"
+            alt="Jantar e vinhos no Guina Restaurante"
+            className="w-full h-full object-cover object-center"
             loading="lazy"
           />
         </picture>
-        <div className="absolute inset-0 bg-navy-950/85 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/85 via-navy-950/65 to-navy-950/90 backdrop-blur-[1px]" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
