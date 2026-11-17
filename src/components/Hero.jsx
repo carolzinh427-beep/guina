@@ -9,16 +9,16 @@ export default function Hero({ onOpenMenu, onOpenReservation }) {
     offset: ['start start', 'end start'],
   });
 
-  const yBackground = useTransform(scrollYProgress, [0, 1], ['0%', '18%']);
+  const yBackground = useTransform(scrollYProgress, [0, 1], ['0%', '16%']);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
     <section
       id="home"
       ref={heroRef}
-      className="relative h-screen min-h-[620px] max-h-[920px] flex items-end justify-center overflow-hidden bg-navy-950"
+      className="relative min-h-[620px] lg:min-h-[700px] h-screen max-h-[940px] flex items-center justify-center overflow-hidden bg-navy-950"
     >
-      {/* Background Image with Parallax & Sombreamento */}
+      {/* Background Image with Parallax & Sombreamento Apenas da Esquerda pra Direita */}
       <motion.div
         className="absolute inset-0 z-0 md:p-5"
         style={{ y: yBackground }}
@@ -33,67 +33,72 @@ export default function Hero({ onOpenMenu, onOpenReservation }) {
           />
         </picture>
 
-        {/* Sombreamento lateral da esquerda para a direita (não tão forte) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/80 via-navy-950/45 to-transparent pointer-events-none" />
+        {/* Sombreamento APENAS da esquerda para a direita (sem sombreamento na direita) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/92 via-navy-950/65 via-35% md:via-45% to-transparent to-75% md:to-85% pointer-events-none" />
 
-        {/* Sombreamento vertical suave com vinheta cinematográfica */}
-        <div className="hero-overlay absolute inset-0 bg-gradient-to-b from-navy-950/75 via-transparent to-navy-950/90 shadow-[inset_0_0_120px_rgba(5,11,20,0.85)] pointer-events-none" />
-        
+        {/* Suave degradê apenas no mobile para garantir leitura sem escurecer a direita no desktop */}
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/50 via-transparent to-navy-950/70 md:hidden pointer-events-none" />
+
         {/* Soft Ambient Border for Desktop */}
-        <div className="absolute inset-5 rounded-[24px] border border-gold/25 hidden md:block pointer-events-none" />
+        <div className="absolute inset-5 rounded-[24px] border border-gold/20 hidden md:block pointer-events-none" />
       </motion.div>
 
-      {/* Hero Content with High-Contrast Shading */}
+      {/* Hero Content: Desktop alinhado à esquerda | Mobile centralizado */}
       <motion.div
         style={{ opacity }}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.15 }}
-        className="absolute top-28 sm:top-32 md:top-36 lg:top-40 left-0 right-0 z-20 px-4 md:px-8 text-center pointer-events-none flex flex-col items-center"
+        className="relative z-20 max-w-7xl w-full mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pt-24 pb-20 sm:pt-28 md:pt-0 flex flex-col items-center md:items-start text-center md:text-left pointer-events-auto"
       >
         {/* Location Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-gold/30 text-champagne mb-3 sm:mb-4 shadow-2xl">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-gold/30 text-champagne mb-3 sm:mb-4 shadow-xl">
           <MapPin size={13} className="text-gold" />
-          <span className="font-sans text-[9px] sm:text-[10.5px] tracking-[0.35em] uppercase font-semibold text-champagne">
+          <span className="font-sans text-[9px] sm:text-[10px] tracking-[0.32em] uppercase font-semibold text-champagne">
             São Paulo · Vila Mariana
           </span>
         </div>
 
-        {/* Headline alterada para Guina Restaurante */}
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-champagne max-w-4xl tracking-tight leading-[1.1] drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)] font-normal">
+        {/* Título: Guina Restaurante */}
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-champagne max-w-2xl tracking-tight leading-[1.08] drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)] font-normal">
           Guina Restaurante
         </h1>
 
-        {/* 5 Golden Stars - Centralizadas e sem o texto */}
-        <div className="flex items-center justify-center gap-2 mt-4 sm:mt-5">
+        {/* Subtítulo: por chefs renomados */}
+        <p className="font-sans text-xs sm:text-sm md:text-base tracking-[0.24em] uppercase text-gold font-medium mt-2 sm:mt-2.5 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+          por chefs renomados
+        </p>
+
+        {/* 5 Estrelas: Embaixo e centralizadas no mobile / à esquerda no desktop */}
+        <div className="flex items-center justify-center md:justify-start gap-1.5 mt-3.5 sm:mt-4">
           {[1, 2, 3, 4, 5].map((star) => (
             <Star
               key={star}
-              size={22}
-              className="text-[#FBBF24] fill-[#FBBF24] drop-shadow-[0_2px_12px_rgba(212,175,55,0.85)]"
+              size={20}
+              className="text-[#FBBF24] fill-[#FBBF24] drop-shadow-[0_2px_10px_rgba(212,175,55,0.85)]"
             />
           ))}
         </div>
+
+        {/* Botões de Ação */}
+        <div className="flex flex-wrap items-center justify-center md:justify-start gap-3.5 pt-6 sm:pt-8">
+          <button
+            onClick={onOpenReservation}
+            className="btn-gold text-xs py-3.5 px-7 shadow-2xl flex items-center gap-2.5 cursor-pointer"
+          >
+            <Calendar size={15} className="text-navy-950" />
+            <span>Reservar Agora</span>
+          </button>
+
+          <button
+            onClick={onOpenMenu}
+            className="btn-outline-champagne text-xs py-3.5 px-7 shadow-2xl bg-black/55 backdrop-blur-md inline-flex items-center gap-2 group hover:bg-black/75 transition-all cursor-pointer border-gold/40 hover:border-gold"
+          >
+            <BookOpen size={14} className="text-gold group-hover:scale-110 transition-transform" />
+            <span>Ver Cardápio Digital</span>
+          </button>
+        </div>
       </motion.div>
-
-      {/* Action Buttons */}
-      <div className="absolute bottom-14 sm:bottom-18 left-0 right-0 z-20 flex flex-wrap items-center justify-center gap-3.5 px-6 pointer-events-auto">
-        <button
-          onClick={onOpenReservation}
-          className="btn-gold text-xs py-3.5 px-7 shadow-2xl flex items-center gap-2.5 cursor-pointer"
-        >
-          <Calendar size={15} className="text-navy-950" />
-          <span>Reservar Agora</span>
-        </button>
-
-        <button
-          onClick={onOpenMenu}
-          className="btn-outline-champagne text-xs py-3.5 px-7 shadow-2xl bg-black/55 backdrop-blur-md inline-flex items-center gap-2 group hover:bg-black/75 transition-all cursor-pointer border-gold/40 hover:border-gold"
-        >
-          <BookOpen size={14} className="text-gold group-hover:scale-110 transition-transform" />
-          <span>Ver Cardápio Digital</span>
-        </button>
-      </div>
 
       {/* Downward Scroll Indicator */}
       <motion.button
