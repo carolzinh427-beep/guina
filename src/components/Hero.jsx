@@ -18,38 +18,42 @@ export default function Hero({ onOpenMenu, onOpenReservation }) {
       ref={heroRef}
       className="relative min-h-[620px] lg:min-h-[700px] h-screen max-h-[940px] flex items-center justify-center overflow-hidden bg-navy-950"
     >
-      {/* Background Image with Parallax & Sombreamento Apenas da Esquerda pra Direita */}
+      {/* Background Image with Parallax & Sombreamento na metade horizontal da esquerda */}
       <motion.div
         className="absolute inset-0 z-0 md:p-5"
         style={{ y: yBackground }}
       >
-        <picture className="block w-full h-full md:rounded-[24px] md:overflow-hidden relative">
-          <source media="(min-width: 768px)" srcSet="/hero_desktop_bistrot.jpeg" />
-          <img
-            src="/hero_mobile_bistrot.jpeg"
-            alt="Guina Restaurante & Wine Bar São Paulo"
-            className="w-full h-full object-cover object-center"
-            loading="eager"
+        <div className="w-full h-full md:rounded-[24px] md:overflow-hidden relative">
+          <picture className="block w-full h-full">
+            <source media="(min-width: 768px)" srcSet="/hero_desktop_bistrot.jpeg" />
+            <img
+              src="/hero_mobile_bistrot.jpeg"
+              alt="Guina Restaurante & Wine Bar São Paulo"
+              className="w-full h-full object-cover object-[65%_center] md:object-center"
+              loading="eager"
+            />
+          </picture>
+
+          {/* Sombreamento estritamente na metade horizontal esquerda (0% a 50%, 0% na direita) */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: 'linear-gradient(90deg, rgba(5, 11, 20, 0.96) 0%, rgba(5, 11, 20, 0.88) 22%, rgba(5, 11, 20, 0.45) 38%, rgba(5, 11, 20, 0) 50%, rgba(5, 11, 20, 0) 100%)'
+            }}
           />
-        </picture>
 
-        {/* Sombreamento APENAS da esquerda para a direita (sem sombreamento na direita) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/92 via-navy-950/65 via-35% md:via-45% to-transparent to-75% md:to-85% pointer-events-none" />
-
-        {/* Suave degradê apenas no mobile para garantir leitura sem escurecer a direita no desktop */}
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/50 via-transparent to-navy-950/70 md:hidden pointer-events-none" />
-
-        {/* Soft Ambient Border for Desktop */}
-        <div className="absolute inset-5 rounded-[24px] border border-gold/20 hidden md:block pointer-events-none" />
+          {/* Soft Ambient Border for Desktop */}
+          <div className="absolute inset-0 rounded-[24px] border border-gold/20 hidden md:block pointer-events-none" />
+        </div>
       </motion.div>
 
-      {/* Hero Content: Desktop alinhado à esquerda | Mobile centralizado */}
+      {/* Hero Content: Alinhado à esquerda na metade sombreada */}
       <motion.div
         style={{ opacity }}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.15 }}
-        className="relative z-20 max-w-7xl w-full mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pt-24 pb-20 sm:pt-28 md:pt-0 flex flex-col items-center md:items-start text-center md:text-left pointer-events-auto"
+        className="relative z-20 max-w-7xl w-full mx-auto px-6 sm:px-8 md:px-12 lg:px-16 pt-24 pb-20 sm:pt-28 md:pt-0 flex flex-col items-start text-left pointer-events-auto"
       >
         {/* Location Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-gold/30 text-champagne mb-3 sm:mb-4 shadow-xl">
@@ -60,7 +64,7 @@ export default function Hero({ onOpenMenu, onOpenReservation }) {
         </div>
 
         {/* Título: Guina Restaurante */}
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-champagne max-w-2xl tracking-tight leading-[1.08] drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)] font-normal">
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-champagne max-w-xl tracking-tight leading-[1.08] drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)] font-normal">
           Guina Restaurante
         </h1>
 
@@ -69,8 +73,8 @@ export default function Hero({ onOpenMenu, onOpenReservation }) {
           por chefs renomados
         </p>
 
-        {/* 5 Estrelas: Embaixo e centralizadas no mobile / à esquerda no desktop */}
-        <div className="flex items-center justify-center md:justify-start gap-1.5 mt-3.5 sm:mt-4">
+        {/* 5 Estrelas: Embaixo, à esquerda */}
+        <div className="flex items-center justify-start gap-1.5 mt-3.5 sm:mt-4">
           {[1, 2, 3, 4, 5].map((star) => (
             <Star
               key={star}
@@ -81,7 +85,7 @@ export default function Hero({ onOpenMenu, onOpenReservation }) {
         </div>
 
         {/* Botões de Ação */}
-        <div className="flex flex-wrap items-center justify-center md:justify-start gap-3.5 pt-6 sm:pt-8">
+        <div className="flex flex-wrap items-center justify-start gap-3.5 pt-6 sm:pt-8">
           <button
             onClick={onOpenReservation}
             className="btn-gold text-xs py-3.5 px-7 shadow-2xl flex items-center gap-2.5 cursor-pointer"
