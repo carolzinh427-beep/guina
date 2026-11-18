@@ -131,9 +131,9 @@ export default function Navbar({ onOpenMenu, onOpenReservation }) {
           <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={onOpenReservation}
-              className="sm:hidden btn-gold text-[9px] py-2 px-3 shadow-sm flex items-center gap-1.5"
+              className="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-gold-light via-gold to-[#B89025] text-navy-950 font-sans text-[9px] font-bold tracking-wider uppercase shadow-sm border border-gold-light/60 active:scale-95 transition-transform shrink-0"
             >
-              <Calendar size={11} className="text-navy-950" />
+              <Calendar size={11} className="text-navy-950 stroke-[2.5]" />
               <span>Reservar</span>
             </button>
             <button
