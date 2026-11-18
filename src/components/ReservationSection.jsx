@@ -79,7 +79,7 @@ export default function ReservationSection({ onOpenReservation }) {
                   Endereço
                 </span>
                 <span className="font-sans text-xs sm:text-sm text-champagne font-medium">
-                  R. Rio Grande, 218 · Vila Mariana, SP
+                  Rua Rio Grande, 304 – Vila Mariana, SP (CEP 04018)
                 </span>
               </div>
             </div>

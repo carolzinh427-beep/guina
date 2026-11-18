@@ -84,7 +84,7 @@ export default function ReservationModal({ isOpen, onClose }) {
       '🍽️ *Solicitação de Reserva - Guina Restaurante & Wine Bar*',
       '',
       `• *Código:* ${reservationCode}`,
-      `• *Unidade:* São Paulo · Vila Mariana (R. Rio Grande, 218)`,
+      `• *Unidade:* São Paulo · Vila Mariana (Rua Rio Grande, 304 – CEP 04018)`,
       `• *Titular:* ${details.name}`,
       details.coHolder ? `• *Acompanhante:* ${details.coHolder}` : null,
       `• *Data:* ${formattedDate}`,

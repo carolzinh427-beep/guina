@@ -64,10 +64,10 @@ export default function Footer({ onOpenReservation }) {
               <MapPin size={16} className="text-gold shrink-0 mt-1" />
               <div>
                 <p className="font-medium text-champagne">Vila Mariana, São Paulo</p>
-                <p className="text-champagne/70">R. Rio Grande, 218</p>
-                <p className="text-champagne/60 text-xs mt-1">CEP: 04018-000</p>
+                <p className="text-champagne/70">Rua Rio Grande, 304</p>
+                <p className="text-champagne/60 text-xs mt-1">CEP: 04018</p>
                 <a
-                  href="https://maps.google.com/?q=R.+Rio+Grande,+218,+Vila+Mariana,+São+Paulo"
+                  href="https://maps.google.com/?q=Rua+Rio+Grande,+304,+Vila+Mariana,+São+Paulo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block text-xs text-gold hover:underline mt-2 font-medium"

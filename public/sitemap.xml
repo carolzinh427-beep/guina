@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.guinarestaurante.com.br/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.guinarestaurante.com.br/hero_desktop_bistrot.jpeg</image:loc>
+      <image:title>Guina Restaurante &amp; Wine Bar</image:title>
+      <image:caption>Alta gastronomia e Wine Bar na Vila Mariana, São Paulo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.guinarestaurante.com.br/guina_facade_toast.jpg</image:loc>
+      <image:title>Fachada Guina Restaurante &amp; Wine Bar</image:title>
+      <image:caption>Chefs e Sommelier brindando em frente ao restaurante</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.guinarestaurante.com.br/logo-guina.png</image:loc>
+      <image:title>Logotipo Guina Restaurante &amp; Wine Bar</image:title>
+      <image:caption>Identidade visual nobre em azul marinho e ouro</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.guinarestaurante.com.br/#cardapio</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.guinarestaurante.com.br/#reservas</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.guinarestaurante.com.br/#vinhos</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.guinarestaurante.com.br/#histoire</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.guinarestaurante.com.br/#galeria</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.guinarestaurante.com.br/#avaliacoes</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.guinarestaurante.com.br/#contato</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
