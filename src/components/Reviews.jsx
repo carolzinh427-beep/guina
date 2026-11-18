@@ -33,7 +33,7 @@ export default function Reviews() {
           </div>
 
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-navy-950 font-normal leading-tight mb-4">
-            A Opinião de Quem Já <em className="italic font-light">Se Encantou</em>
+            A Opinião de Quem Já Se Encantou <em className="italic font-light">Pelo Trabalho dos Chefs</em>
           </h2>
 
           <div className="flex items-center justify-center gap-2 text-gold">
