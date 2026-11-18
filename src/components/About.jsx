@@ -4,10 +4,10 @@ import { Sparkles, ArrowRight, Wine, Check } from 'lucide-react';
 
 export default function About({ onOpenReservation }) {
   const highlights = [
-    "Ambiente intimista e romântico à luz de velas",
-    "Chefs com formação internacional pela Le Cordon Bleu",
+    "Homenagem emocionante e acolhimento familiar",
+    "Chefs com formação e especializações Le Cordon Bleu",
     "Adega exclusiva com mais de 120 rótulos selecionados",
-    "Gastronomia assinada pelos chefs do premiado Bistrot de Ville",
+    "Alta gastronomia com o selo de excelência Grupo de Ville",
   ];
 
   return (
@@ -43,13 +43,13 @@ export default function About({ onOpenReservation }) {
               whileInView={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
               viewport={{ once: true }}
-              className="absolute -bottom-8 -right-4 md:-right-8 w-48 md:w-60 bg-navy-900 border border-gold/40 rounded-2xl p-4 sm:p-5 shadow-2xl"
+              className="absolute -bottom-8 -right-4 md:-right-8 w-52 md:w-64 bg-navy-900 border border-gold/40 rounded-2xl p-4 sm:p-5 shadow-2xl"
             >
-              <div className="font-serif text-xl sm:text-2xl text-gold font-bold leading-tight mb-1">
-                Bistrot de Ville
+              <div className="font-serif text-lg sm:text-xl text-gold font-bold leading-tight mb-1">
+                Grupo de Ville
               </div>
               <div className="font-sans text-[8px] sm:text-[9px] tracking-[0.2em] uppercase text-champagne/80 font-semibold leading-relaxed">
-                Pelos Chefs do Restaurante Premiado
+                Chefs Roma Lopes &amp; Carol Barbosa
               </div>
             </motion.div>
           </motion.div>
@@ -65,11 +65,13 @@ export default function About({ onOpenReservation }) {
             <div>
               <p className="font-sans text-[10.5px] tracking-[0.4em] uppercase text-navy-700 font-bold mb-3 flex items-center gap-2">
                 <span className="w-8 h-[1.5px] bg-gold" />
-                Culinária Autoral &amp; Tradição
+                Origem &amp; Afeto &bull; Vila Mariana
               </p>
-              <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-navy-950 leading-[1.15]">
-                A Arte da Gastronomia <br />
-                <em className="italic font-light text-navy-800">em Nosso Cardápio Autoral</em>
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-navy-950 leading-[1.2]">
+                Nossa História <br />
+                <span className="italic font-light text-navy-800 text-xl sm:text-2xl md:text-3xl block mt-2 font-serif">
+                  Guina Restaurante: Afeto, Técnica e Memória no Coração da Vila Mariana
+                </span>
               </h2>
             </div>
 
@@ -77,14 +79,26 @@ export default function About({ onOpenReservation }) {
 
             <div className="space-y-4 text-navy-900/80 font-body text-base md:text-[17px] leading-relaxed">
               <p>
-                O <strong>Guina Restaurante &amp; Wine Bar</strong> é a nova e exclusiva casa gastronômica concebida e comandada pelos chefs do premiado <em>Bistrot de Ville</em> na Vila Mariana, São Paulo.
+                No pulsar gastronômico da Vila Mariana, um dos bairros mais desejados de São Paulo, nasce o <strong>Guina Restaurante</strong>. O mais novo endereço de destaque da cidade chega com o selo de excelência do <strong>Grupo de Ville</strong>, comandado pelos chefs proprietários <strong>Roma Lopes e Carol Barbosa</strong> — dupla com sólida formação e diversas especializações pela <em>Le Cordon Bleu</em>, a mais renomada escola de gastronomia do mundo.
               </p>
               <p>
-                Trazendo a mesma maestria culinária, formação internacional pela renomada <em>Le Cordon Bleu</em> e o rigor técnico que consagraram seus criadores, o Guina nasce como uma experiência independente e autoral, unindo pratos refinados a uma curadoria criteriosa de vinhos finos.
+                Mas, por trás do rigor técnico e da alta gastronomia, existe uma história de profundo afeto que dá nome e alma à casa.
               </p>
               <p>
-                Nossa exclusiva atmosfera combina elementos barrocos em azul nobre e ouro com a delicadeza de hortênsias frescas, criando o cenário ideal para jantares românticos, comemorações memoráveis e encontros refinados.
+                O restaurante é uma homenagem emocionante a <strong>Roger</strong>, pai da chef Carol e sogro do chef Roma, cuja partida entristeceu a família, mas deixou um legado eterno de inspiração. Grande apreciador de bons vinhos e da boa mesa, Roger era conhecido por sua alma simples e pela gentileza genuína com que tratava a todos, sem jamais fazer qualquer distinção.
               </p>
+              <p>
+                Durante a busca por um nome que traduzisse a essência desse novo projeto, a lembrança mais doce falou mais alto: <strong>&ldquo;Guina&rdquo;</strong> era o apelido carinhoso pelo qual Roger chamava Carol. Na família, sempre que essa palavra era ouvida, anunciava algo bom — um sorriso, uma surpresa, uma notícia feliz ou um abraço apertado.
+              </p>
+              <p>
+                Assim nasceu o <strong>Guina Restaurante</strong>: em memória de Roger e inspirado na sua forma generosa de acolher as pessoas.
+              </p>
+              <p>
+                Cada detalhe da casa reflete esse espírito. No Guina, a técnica refinada de Roma Lopes e Carol Barbosa encontra o calor de um lar. É um lugar onde vinhos cuidadosamente selecionados acompanham pratos elaborados com carinho pelos próprios chefs, transformando cada refeição em uma celebração à vida, à boa companhia e às memórias que aquecem o coração.
+              </p>
+              <div className="pt-3 pb-1 border-l-2 border-gold pl-4 italic text-navy-950 font-serif text-lg md:text-xl font-medium">
+                &ldquo;Seja bem-vindo ao Guina. Sinta-se abraçado.&rdquo;
+              </div>
             </div>
 
             {/* Checklist */}
