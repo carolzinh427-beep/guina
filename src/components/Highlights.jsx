@@ -6,8 +6,8 @@ export default function Highlights() {
   const items = [
     {
       icon: <Award className="w-6 h-6 text-gold mb-2.5 stroke-[1.5]" />,
-      title: "Chefs do Bistrot de Ville",
-      subtitle: "Criado pelos chefs do restaurante premiado",
+      title: "Guina Restaurante",
+      subtitle: "Excelência e tradição gastronômica",
     },
     {
       icon: <Sparkles className="w-6 h-6 text-gold mb-2.5 stroke-[1.5]" />,

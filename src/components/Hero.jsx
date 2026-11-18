@@ -69,9 +69,9 @@ export default function Hero({ onOpenMenu, onOpenReservation }) {
           Guina Restaurante
         </h1>
 
-        {/* Subtítulo: pelos chefs do premiado bistrot de ville */}
+        {/* Subtítulo: Cozinha Autoral & Wine Bar */}
         <p className="font-sans text-xs sm:text-sm md:text-base tracking-[0.22em] uppercase text-gold font-medium mt-2 sm:mt-2.5 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-          pelos chefs do premiado bistrot de ville
+          Cozinha Autoral &amp; Wine Bar
         </p>
 
         {/* 5 Estrelas: Embaixo, à esquerda */}
