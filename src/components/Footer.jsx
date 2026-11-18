@@ -35,11 +35,12 @@ export default function Footer({ onOpenReservation }) {
             {/* Social Icons */}
             <div className="flex items-center gap-3 pt-2">
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/guinarestaurante?utm_source=ig_web_button_share_sheet&dmpr=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram Guina Restaurante"
+                aria-label="Instagram @guinarestaurante"
                 className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-champagne/80 hover:text-gold hover:border-gold hover:bg-gold/10 transition-colors"
+                title="Siga @guinarestaurante no Instagram"
               >
                 <Instagram size={17} />
               </a>
@@ -49,6 +50,7 @@ export default function Footer({ onOpenReservation }) {
                 rel="noopener noreferrer"
                 aria-label="WhatsApp Guina Restaurante"
                 className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center text-champagne/80 hover:text-gold hover:border-gold hover:bg-gold/10 transition-colors"
+                title="Fale no WhatsApp"
               >
                 <MessageCircle size={17} />
               </a>

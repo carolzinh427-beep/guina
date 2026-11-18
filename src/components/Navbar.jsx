@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Calendar, Phone, Wine } from 'lucide-react';
+import { Menu, X, Calendar, Phone, Wine, Instagram } from 'lucide-react';
 
 export default function Navbar({ onOpenMenu, onOpenReservation }) {
   const [scrolled, setScrolled] = useState(false);
@@ -107,13 +107,25 @@ export default function Navbar({ onOpenMenu, onOpenReservation }) {
           </div>
 
           {/* Right Action Buttons */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden sm:flex items-center gap-2.5">
+            <a
+              href="https://www.instagram.com/guinarestaurante?utm_source=ig_web_button_share_sheet&dmpr=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-full border border-gold/25 text-champagne/80 hover:text-gold hover:border-gold transition-colors"
+              title="Instagram @guinarestaurante"
+              aria-label="Instagram @guinarestaurante"
+            >
+              <Instagram size={15} />
+            </a>
+
             <a
               href="https://wa.me/5511983483472?text=Olá!%20Gostaria%20de%20informações%20sobre%20o%20Guina%20Restaurante%20&%20Wine%20Bar."
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 rounded-full border border-gold/25 text-champagne/80 hover:text-gold hover:border-gold transition-colors"
               title="Fale no WhatsApp"
+              aria-label="WhatsApp Guina Restaurante"
             >
               <Phone size={15} />
             </a>
@@ -207,15 +219,26 @@ export default function Navbar({ onOpenMenu, onOpenReservation }) {
                   <Calendar size={15} />
                   <span>Reservar Mesa Agora</span>
                 </button>
-                <a
-                  href="https://wa.me/5511983483472?text=Olá!%20Gostaria%20de%20informações%20sobre%20o%20Guina%20Restaurante%20&%20Wine%20Bar."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-outline-champagne w-full text-center py-3 flex items-center justify-center gap-2 text-xs"
-                >
-                  <Phone size={14} className="text-gold" />
-                  <span>(11) 98348-3472</span>
-                </a>
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href="https://www.instagram.com/guinarestaurante?utm_source=ig_web_button_share_sheet&dmpr=ZDNlZDc0MzIxNw=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-outline-champagne text-center py-2.5 flex items-center justify-center gap-1.5 text-xs"
+                  >
+                    <Instagram size={14} className="text-gold" />
+                    <span>Instagram</span>
+                  </a>
+                  <a
+                    href="https://wa.me/5511983483472?text=Olá!%20Gostaria%20de%20informações%20sobre%20o%20Guina%20Restaurante%20&%20Wine%20Bar."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-outline-champagne text-center py-2.5 flex items-center justify-center gap-1.5 text-xs"
+                  >
+                    <Phone size={14} className="text-gold" />
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
               </div>
             </motion.div>
           </>
